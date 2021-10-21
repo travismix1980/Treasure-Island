@@ -27,17 +27,20 @@ print("Your mission is to find the treasure.")
 
 user_input = input("You can go left or right by typing ('left' or 'right'): ")
 
+# left
 if user_input.lower() == "left":
     print("You come to a river")
 
     user_input = input("Would you like to swim across the river or wait for a boat ('swim' or 'wait')? ")
 
+    # wait
     if user_input.lower() == "wait":
         print("You get safely across the river and come to a house")
         print("The house has three doors.  A red one a blue one and a yellow one.")
 
         user_input = input("Choose a door ('red', 'blue', 'yellow')? ")
 
+        # choose a door
         if user_input.lower() == "red":
             print("You are burned in a fire")
             print("Game Over")
@@ -48,17 +51,17 @@ if user_input.lower() == "left":
             print("You find the treasure!!!")
             print("You Win!")
 
+        # not a door
         else:
             print("You did not find the treasure")
             print("Game Over.")
+    
+    # not wait
     else: 
         print("You are attacked by a trout.")
         print("Game Over")
+
+# not left 
 else:
     print("You fall into a hole.")
     print("Game Over")
-
-
-
-
-
